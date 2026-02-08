@@ -28,6 +28,7 @@ Singleton {
                            "MediaMini": mediaMiniComponent,
                            "Microphone": microphoneComponent,
                            "Network": networkComponent,
+                           "News": newsComponent,
                            "NightLight": nightLightComponent,
                            "NoctaliaPerformance": noctaliaPerformanceComponent,
                            "NotificationHistory": notificationHistoryComponent,
@@ -60,6 +61,7 @@ Singleton {
                                      "MediaMini": "WidgetSettings/MediaMiniSettings.qml",
                                      "Microphone": "WidgetSettings/MicrophoneSettings.qml",
                                      "Network": "WidgetSettings/NetworkSettings.qml",
+                                     "News": "WidgetSettings/NewsSettings.qml",
                                      "NightLight": "WidgetSettings/NightLightSettings.qml",
                                      "NoctaliaPerformance": "WidgetSettings/NoctaliaPerformanceSettings.qml",
                                      "NotificationHistory": "WidgetSettings/NotificationHistorySettings.qml",
@@ -266,6 +268,16 @@ Singleton {
                                     "iconColor": "none",
                                     "textColor": "none"
                                   },
+                                  "News": {
+                                    "displayMode": "onhover",
+                                    "apiKey": "YOUR_API_KEY_HERE",
+                                    "category": "general",
+                                    "refreshInterval": 30,
+                                    "widgetWidth": 300,
+                                    "maxHeadlines": 5,
+                                    "changeNewsInterval": 20,
+                                    "rollingSpeed": 50
+                                  },
                                   "NightLight": {
                                     "iconColor": "none"
                                   },
@@ -383,6 +395,9 @@ Singleton {
   }
   property Component networkComponent: Component {
     Network {}
+  }
+  property Component newsComponent: Component {
+    News {}
   }
   property Component wallpaperSelectorComponent: Component {
     WallpaperSelector {}
